@@ -17,9 +17,9 @@ $(document).ready(function () {
 	});
 
 	$("label").on("click", function (e) {
-		// Toggle the "striked" class of the clicked LI
+		// Toggle the "striked" class of the clicked label
 		$(this).toggleClass("striked");
-		// Find the checkbox element within the LI
+		// Find the checkbox element within the label - parent
 		const checkbox = $(this).parent().find('input[type="checkbox"]');
 		// Toggle the checkbox state (checked/unchecked)
 		checkbox.prop("checked", !checkbox.prop("checked"));
