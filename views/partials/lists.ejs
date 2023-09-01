@@ -1,40 +1,41 @@
-<div class="list-title">
-	<h2>Personal ToDo List</h2>
+<div class="max-w">
+	<div class="list-title">
+		<h2>Personal ToDo List</h2>
+	</div>
+	<ul class="list">
+		<% for (var i=0; i < personalToDos.length; i++) { %>
+		<li class="list-item">
+			<input
+				type="checkbox"
+				id="task-pers-<%= i %>"
+				class="myCheckbox"
+				name="task"
+				value=""
+			/>
+			<label for="task-pers-<%= i %>"><%= personalToDos[i] %></label>
+		</li>
+
+		<% }; %>
+	</ul>
+
+	<h2 class="list-title">Work ToDo List</h2>
+
+	<ul class="list">
+		<% for (var i=0; i < workToDos.length; i++) { %>
+		<li class="list-item">
+			<input
+				type="checkbox"
+				id="task-work-<%= i %>"
+				class="myCheckbox"
+				name="task"
+				value=""
+			/>
+			<label for="task-work-<%= i %>"><%= workToDos[i] %></label>
+		</li>
+
+		<% }; %>
+	</ul>
 </div>
-<ul class="list">
-	<% for (var i=0; i < personalToDos.length; i++) { %>
-	<li class="list-item">
-		<input
-			type="checkbox"
-			id="task-pers-<%= i %>"
-			class="myCheckbox"
-			name="task"
-			value=""
-		/>
-		<label for="task-pers-<%= i %>"><%= personalToDos[i] %></label>
-	</li>
-
-	<% }; %>
-</ul>
-
-<h2 class="list-title">Work ToDo List</h2>
-
-<ul class="list">
-	<% for (var i=0; i < workToDos.length; i++) { %>
-	<li class="list-item">
-		<input
-			type="checkbox"
-			id="task-work-<%= i %>"
-			class="myCheckbox"
-			name="task"
-			value=""
-		/>
-		<label for="task-work-<%= i %>"><%= workToDos[i] %></label>
-	</li>
-
-	<% }; %>
-</ul>
-
 <script>
 	$("input").click(function () {
 		$(this).parent("li").toggleClass("striked");

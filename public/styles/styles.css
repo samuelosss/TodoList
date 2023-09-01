@@ -18,6 +18,10 @@ body {
     padding:  10vW 10vW 0 10vW;
 }
 
+.max-w {
+    max-width: 500px;
+}
+
 h1,h2,h3,h4,h5,h6 {
     box-sizing: border-box;
     padding: 0;
@@ -35,12 +39,11 @@ h1,h2,h3,h4,h5,h6 {
 .input, .select {
     box-sizing: border-box;
     width: 100%;
+    font-family: var(--font1);
 }
 
 input[type="submit"] {
-    
-
-appearance: auto;
+    appearance: auto;
     user-select: none;
     white-space-collapse: preserve;
     text-wrap: nowrap;
