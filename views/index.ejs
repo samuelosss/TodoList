@@ -1,0 +1,35 @@
+<!-- HEAD and header -->
+<%- include("partials/header.ejs") %>
+
+<!-- Main -->
+<h1>TO DO List</h1>
+<br /><br />
+<div class="new-tasks">
+	<form action="/submit" method="post">
+		<label for="taskName">Task name:</label><br />
+		<input class="input" type="text" name="taskName" id="task" required />
+		<br /><br />
+		<label for="select-category">Choose category:</label>
+		<br /><select
+			class="input select"
+			name="category"
+			id="select-category"
+			required
+		>
+			<!-- <option value="">--Please choose an option--</option> -->
+			<option class="select" value="Work">Work</option>
+			<option class="select" value="Personal">Personal</option>
+		</select>
+		<br /><br /><input
+			class="select btn-success"
+			type="submit"
+			value="Add task"
+		/>
+	</form>
+</div>
+<br /><br />
+<%- include("partials/lists.ejs") %>
+<br />
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>
