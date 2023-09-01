@@ -30,14 +30,10 @@
 				name="task"
 				value=""
 			/>
-			<label for="task-work-<%= i %>"><%= workToDos[i] %></label>
+			<label class="w-100" for="task-work-<%= i %>"><%= workToDos[i] %></label>
 		</li>
 
 		<% }; %>
 	</ul>
 </div>
-<script>
-	$("input").click(function () {
-		$(this).parent("li").toggleClass("striked");
-	});
-</script>
+<script src="/script/actions.js"></script>
