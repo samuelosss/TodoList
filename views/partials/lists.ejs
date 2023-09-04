@@ -1,39 +1,51 @@
-<div class="max-w">
-	<div class="list-title">
+<div class="max-w flex-column">
+	<div class="list-title personal">
 		<h2>Personal ToDo List</h2>
+		<p>(&nbsp;<%= personalToDos.length %>&nbsp;)</p>
 	</div>
-	<ul class="list">
-		<% for (var i=0; i < personalToDos.length; i++) { %>
-		<li class="list-item">
-			<input
-				type="checkbox"
-				id="task-pers-<%= i %>"
-				class="myCheckbox"
-				name="task"
-				value=""
-			/>
-			<label for="task-pers-<%= i %>"><%= personalToDos[i] %></label>
-		</li>
+	<div class="padd">
+		<div class="list">
+			<ul>
+				<% for (var i=0; i < personalToDos.length; i++) { %>
+				<li class="list-item">
+					<input
+						type="checkbox"
+						id="task-pers-<%= i %>"
+						class="myCheckbox"
+						name="task"
+						value=""
+					/>
+					<label for="task-pers-<%= i %>"><%= personalToDos[i] %></label>
+				</li>
 
-		<% }; %>
-	</ul>
+				<% }; %>
+			</ul>
+		</div>
+	</div>
+	<div class="list-title work">
+		<h2>Work ToDo List</h2>
+		<p>(&nbsp;<%= workToDos.length %>&nbsp;)</p>
+	</div>
+	<div class="padd">
+		<div class="list">
+			<ul>
+				<% for (var i=0; i < workToDos.length; i++) { %>
+				<li class="list-item">
+					<input
+						type="checkbox"
+						id="task-work-<%= i %>"
+						class="myCheckbox"
+						name="task"
+						value=""
+					/>
+					<label class="w-100" for="task-work-<%= i %>"
+						><%= workToDos[i] %></label
+					>
+				</li>
 
-	<h2 class="list-title">Work ToDo List</h2>
-
-	<ul class="list">
-		<% for (var i=0; i < workToDos.length; i++) { %>
-		<li class="list-item">
-			<input
-				type="checkbox"
-				id="task-work-<%= i %>"
-				class="myCheckbox"
-				name="task"
-				value=""
-			/>
-			<label class="w-100" for="task-work-<%= i %>"><%= workToDos[i] %></label>
-		</li>
-
-		<% }; %>
-	</ul>
+				<% }; %>
+			</ul>
+		</div>
+	</div>
 </div>
 <script src="/script/actions.js"></script>
